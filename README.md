@@ -1,23 +1,23 @@
-# RAG Chatbot with LlamaIndex, Grok API, and HuggingFace Embeddings
+# RAG Chatbot with LlamaIndex, Groq API, and HuggingFace Embeddings
 
-This project implements a Retrieval-Augmented Generation (RAG) chatbot using [LlamaIndex](https://www.llamaindex.ai/), [Grok API](https://x.ai/api), and [HuggingFace embeddings](https://huggingface.co/). The chatbot indexes documents (e.g., PDFs) and answers questions based on the content, leveraging Grok for fast response generation and HuggingFace for efficient document embeddings.
+This project implements a Retrieval-Augmented Generation (RAG) chatbot using [LlamaIndex](https://www.llamaindex.ai/), [groq API](https://x.ai/api), and [HuggingFace embeddings](https://huggingface.co/). The chatbot indexes documents (e.g., PDFs) and answers questions based on the content, leveraging groq for fast response generation and HuggingFace for efficient document embeddings.
 
 ## Features
 - **Document Indexing**: Indexes PDF documents using LlamaIndex with HuggingFace embeddings (`sentence-transformers/all-MiniLM-L6-v2`).
-- **Context-Aware Responses**: Combines document retrieval with Grok's LLM for accurate answers.
+- **Context-Aware Responses**: Combines document retrieval with groq's LLM for accurate answers.
 - **Simple CLI Interface**: Interactive command-line interface for chatting with the bot.
 - **Extensible**: Easily adaptable for other document types or embedding models.
 
 ## Prerequisites
 - Python 3.8 or higher
-- A valid [Grok API key](https://x.ai/api)
+- A valid [groq API key](https://x.ai/api)
 - A PDF document for indexing (placed in the `data` folder)
 
 ## Installation
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Vamsi-2203/Build-a-RAG-Chatbot-with-LlamaIndex-Grok-API-and-HuggingFace-Embeddings.git
+   git clone https://github.com/Vamsi-2203/Build-a-RAG-Chatbot-with-LlamaIndex-groq-API-and-HuggingFace-Embeddings.git
    cd rag-chatbot
    ```
 
@@ -42,9 +42,9 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot using [Ll
 
 ## Setup
 
-1. **Obtain a Grok API Key**:
-   - Sign up at [xAI API](https://x.ai/api) to get your Grok API key.
-   - Replace `"your_grok_api_key_here"` in `rag_chatbot_hf.py` with your key:
+1. **Obtain a groq API Key**:
+   - Sign up at [xAI API](https://x.ai/api) to get your groq API key.
+   - Replace `"your_groq_api_key_here"` in `rag_chatbot_hf.py` with your key:
      ```python
      os.environ["GROQ_API_KEY"] = "your_actual_api_key"
      ```
@@ -90,14 +90,14 @@ rag-chatbot/
 
 ## Customization
 - **Change Embedding Model**: Modify the `model_name` in `HuggingFaceEmbedding` (e.g., `sentence-transformers/all-mpnet-base-v2` for higher quality).
-- **Switch LLM Model**: Update the `model` in `Groq` (e.g., `mixtral-8x7b-32768` for a different Grok model).
+- **Switch LLM Model**: Update the `model` in `Groq` (e.g., `mixtral-8x7b-32768` for a different groq model).
 - **Add a Web UI**: Integrate with [Streamlit](https://streamlit.io/) for a browser-based interface:
   ```bash
   pip install streamlit
   ```
 
 ## Troubleshooting
-- **API Key Errors**: Ensure the Grok API key is valid and has sufficient quota.
+- **API Key Errors**: Ensure the groq API key is valid and has sufficient quota.
 - **Memory Issues**: Use a smaller embedding model or reduce document size.
 - **Package Conflicts**: Verify `requirements.txt` versions and reinstall if needed:
   ```bash
